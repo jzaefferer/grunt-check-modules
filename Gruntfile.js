@@ -1,16 +1,8 @@
 module.exports = function(grunt) {
   "use strict";
 
-  // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
-    lint: {
-      files: ['grunt.js', 'tasks/**/*.js']
-    },
-    watch: {
-      files: '<config:lint.files>',
-      tasks: 'default'
-    },
     jshint: {
       options: {
         curly: true,
@@ -24,15 +16,17 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         node: true,
-        trailing: true
+        trailing: true,
+        globals: {
+          exports: true
+        }
       },
-      globals: {
-        exports: true
-      }
+      files: ['grunt.js', 'tasks/**/*.js']
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadTasks('tasks');
-  grunt.registerTask('default', 'lint check-modules');
+  grunt.registerTask('default', ['jshint', 'check-modules']);
 
 };

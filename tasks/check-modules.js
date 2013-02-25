@@ -11,7 +11,7 @@
 
  grunt.registerTask( "check-modules", "Run this before anything else that loads local modules to verify they're installed", function() {
 	var done = this.async();
-	grunt.utils.spawn({
+	grunt.util.spawn({
 		cmd: "npm",
 		args: [ "ls" ]
 	}, function( err ) {
