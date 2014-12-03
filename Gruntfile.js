@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           exports: true
         }
       },
-      files: ['grunt.js', 'tasks/**/*.js']
+      files: ['Gruntfile.js', 'tasks/**/*.js']
     }
   });
 
