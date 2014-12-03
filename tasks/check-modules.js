@@ -6,10 +6,10 @@
  * Licensed under the MIT license.
  */
 
- module.exports = function(grunt) {
- "use strict";
+module.exports = function(grunt) {
+"use strict";
 
- grunt.registerTask( "check-modules", "Run this before anything else that loads local modules to verify they're installed", function() {
+grunt.registerTask( "check-modules", "Run this before anything else that loads local modules to verify they're installed", function() {
 	var done = this.async();
 	grunt.util.spawn({
 		cmd: "npm",
@@ -24,6 +24,6 @@
 		grunt.verbose.ok();
 		done();
 	});
- });
+});
 
- };
+};
