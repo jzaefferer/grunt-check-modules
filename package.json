@@ -1,7 +1,7 @@
 {
   "name": "grunt-check-modules",
   "description": "Grunt plugin for checking that all node_modules are installed and up-to-date.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/jzaefferer/grunt-check-modules",
   "author": {
     "name": "Jörn Zaefferer",
